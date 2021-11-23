@@ -1,32 +1,30 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-
-using Microsoft.Extensions.DependencyInjection;
 
 using R5T.D0096;
 using R5T.L0017.D001;
+using R5T.T0062;
 using R5T.T0063;
 
 
 namespace R5T.D0098.I001
 {
-    public static class IServiceCollectionExtensions
+    public static class IServiceActionExtensions
     {
         /// <summary>
         /// Adds the <see cref="MachineMessageJsonReserializer"/> implementation of <see cref="IMachineMessageJsonReserializer"/> as a <see cref="ServiceLifetime.Singleton"/>.
         /// </summary>
-        public static IServiceCollection AddMachineMessageJsonReserializer(this IServiceCollection services,
+        public static IServiceAction<IMachineMessageJsonReserializer> AddMachineMessageJsonReserializerAction(this IServiceAction _,
             IServiceAction<ILoggerUnbound> loggerUnboundAction,
             IServiceAction<IHumanOutput> humanOutputAction,
             IEnumerable<IServiceAction<IMachineMessageTypeJsonSerializationHandler>> machineMessageTypeJsonSerializationHandlerActions)
         {
-            services
-                .Run(loggerUnboundAction)
-                .Run(humanOutputAction)
-                .Run(machineMessageTypeJsonSerializationHandlerActions)
-                .AddSingleton<IMachineMessageJsonReserializer, MachineMessageJsonReserializer>();
+            var serviceAction = _.New<IMachineMessageJsonReserializer>(services => services.AddMachineMessageJsonReserializer(
+                loggerUnboundAction,
+                humanOutputAction,
+                machineMessageTypeJsonSerializationHandlerActions));
 
-            return services;
+            return serviceAction;
         }
     }
 }

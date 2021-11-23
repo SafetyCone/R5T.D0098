@@ -1,13 +1,17 @@
 using System;
-using System.Threading.Tasks;
 
-using R5T.Dacia;
+using R5T.D0097;
+using R5T.T0064;
+using R5T.T0091;
 
 
 namespace R5T.D0098
 {
     [ServiceDefinitionMarker]
-    public interface IMachineMessageJsonReserializer
+    public interface IMachineMessageJsonReserializer :
+        IMachineMessageJsonDeserializer,
+        IMachineMessageJsonSerializer,
+        ITypeBasedJsonDeserializer<IMachineMessage>
     {
     }
 }

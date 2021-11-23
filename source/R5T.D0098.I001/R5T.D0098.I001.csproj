@@ -1,7 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\R5T.Dacia.Extensions\source\R5T.Dacia.Extensions\R5T.Dacia.Extensions.csproj" />
+    <ProjectReference Include="..\..\..\R5T.D0096\source\R5T.D0096.Base\R5T.D0096.Base.csproj" />
+    <ProjectReference Include="..\..\..\R5T.D0097\source\R5T.D0097.I001\R5T.D0097.I001.csproj" />
+    <ProjectReference Include="..\..\..\R5T.L0017\source\R5T.L0017.D001\R5T.L0017.D001.csproj" />
     <ProjectReference Include="..\R5T.D0098.Base\R5T.D0098.Base.csproj" />
   </ItemGroup>
 
