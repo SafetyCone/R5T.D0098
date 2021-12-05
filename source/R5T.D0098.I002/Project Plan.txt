@@ -1,0 +1,3 @@
+R5T.D0098.I002 - Default implementation for Machine message JSON serialization handlers for simple machine message types..
+
+GOALS:
