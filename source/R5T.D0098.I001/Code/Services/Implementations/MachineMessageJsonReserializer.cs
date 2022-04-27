@@ -25,7 +25,8 @@ namespace R5T.D0098.I001
         private TypeBasedJsonReserializer<IMachineMessage> JsonReserializer { get; }
 
 
-        public MachineMessageJsonReserializer(ILogger<MachineMessageJsonReserializer> logger,
+        public MachineMessageJsonReserializer(
+            ILogger<MachineMessageJsonReserializer> logger,
             IHumanOutput humanOutput,
             IEnumerable<IMachineMessageTypeJsonSerializationHandler> machineMessageTypeJsonSerializationHandlers)
         {
