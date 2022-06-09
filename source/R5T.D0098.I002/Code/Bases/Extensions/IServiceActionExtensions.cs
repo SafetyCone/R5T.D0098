@@ -9,7 +9,7 @@ namespace R5T.D0098.I002
     public static class IServiceActionExtensions
     {
         /// <summary>
-        /// Adds the <see cref="SimpleTextJsonSerializationHandler"/> implementation of <see cref="IMachineMessageTypeJsonSerializationHandler"/> as a <see cref="ServiceLifetime.Singleton"/>.
+        /// Adds the <see cref="SimpleTextJsonSerializationHandler"/> implementation of <see cref="IMachineMessageTypeJsonSerializationHandler"/> as a <see cref="Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton"/>.
         /// </summary>
         public static IServiceAction<IMachineMessageTypeJsonSerializationHandler> AddSimpleTextJsonSerializationHandlerAction(this IServiceAction _)
         {

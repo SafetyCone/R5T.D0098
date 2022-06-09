@@ -12,7 +12,7 @@ namespace R5T.D0098.I001
     public static class IServiceActionExtensions
     {
         /// <summary>
-        /// Adds the <see cref="MachineMessageJsonReserializer"/> implementation of <see cref="IMachineMessageJsonReserializer"/> as a <see cref="ServiceLifetime.Singleton"/>.
+        /// Adds the <see cref="MachineMessageJsonReserializer"/> implementation of <see cref="IMachineMessageJsonReserializer"/> as a <see cref="Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton"/>.
         /// </summary>
         public static IServiceAction<IMachineMessageJsonReserializer> AddMachineMessageJsonReserializerAction(this IServiceAction _,
             IServiceAction<ILoggerUnbound> loggerUnboundAction,
